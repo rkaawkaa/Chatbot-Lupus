@@ -238,6 +238,8 @@ $("document").ready(function() {
     },150)  
   });
   $('.th2').click(function() {
+   
+    
     var innerTextButton = document.querySelector('.th2').innerText;
     chosenButtonDisplay(innerTextButton);     
     setTimeout(function() {
@@ -245,6 +247,7 @@ $("document").ready(function() {
     },150)  
   });
   $('.th3').click(function() {
+    
     var innerTextButton = document.querySelector('.th3').innerText;
     chosenButtonDisplay(innerTextButton);     
     setTimeout(function() {
@@ -252,6 +255,7 @@ $("document").ready(function() {
     },150)  
   });
   $('.th4').click(function() {
+    
     var innerTextButton = document.querySelector('.th4').innerText;
     chosenButtonDisplay(innerTextButton);     
     setTimeout(function() {
@@ -259,6 +263,7 @@ $("document").ready(function() {
     },150)  
   });
   $('.th5').click(function() {
+    
     var innerTextButton = document.querySelector('.th5').innerText;
     chosenButtonDisplay(innerTextButton);     
     setTimeout(function() {
@@ -290,7 +295,7 @@ $("document").ready(function() {
 
   //function d'entree de themes
   function EntreeAnxiety() {
-    enterTheme();  //ROBIN2
+    enterTheme();  
     var pd1 = dataTheme[langAttr].anxiety.questions.pd1; 
     var pd2 = dataTheme[langAttr].anxiety.questions.pd5;
     proposeChoice2(pd1,pd2)
@@ -374,6 +379,8 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
   <h2>${propositionDirect5}</h2>
   </div></div>`
   $('.th1').click(function() {
+    
+    
     var innerTextButton = document.querySelector('.th1').innerText;
     chosenButtonDisplay(innerTextButton);     
     setTimeout(function() {
@@ -381,6 +388,7 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     },150)  
   });
   $('.th2').click(function() {
+    
     var innerTextButton = document.querySelector('.th2').innerText;
     chosenButtonDisplay(innerTextButton);     
     setTimeout(function() {
@@ -388,6 +396,7 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     },150)  
   });
   $('.th3').click(function() {
+   
     var innerTextButton = document.querySelector('.th3').innerText;
     chosenButtonDisplay(innerTextButton);     
     setTimeout(function() {
@@ -395,6 +404,7 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     },150)  
   });
   $('.th4').click(function() {
+    
     var innerTextButton = document.querySelector('.th4').innerText;
     chosenButtonDisplay(innerTextButton);     
     setTimeout(function() {
@@ -402,6 +412,7 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     },150)  
   });
   $('.th5').click(function() {
+    
     var innerTextButton = document.querySelector('.th5').innerText;
     chosenButtonDisplay(innerTextButton);     
     setTimeout(function() {
@@ -431,10 +442,7 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
 
  
  
-  //Pour chaque fonction proposeChoice, je crée d'abord les buttons avec les paramètres qui me sont envoyés, puis je lance la fonction lookChoice();
-  //La fonction lookChoice run une loop pour tous les élements de la division choix-questions(choixcontainernumber)
-  //Pour tous les élements choix-questions :  addEvent listener. Puis on va check si innertext = ça.
-  //Pour le delai de propoce choice, envoyer la summ des différents t + 700
+  
   function proposeChoice1(propositionDirect1) {
     setTimeout(function() {
       choixContainerNumber++;
@@ -442,6 +450,194 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     <div class="choix choix${choixContainerNumber} c1">
         <h2>${propositionDirect1}</h2>
     </div></div>`
+
+    var choicesclass= '.choix' + choixContainerNumber;
+    var choicesX = document.querySelectorAll(choicesclass);
+    if ( rd1see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd1;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd1;
+        let depression1 = dataTheme[langAttr].depression.questions.pd1;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd1;
+        let pain1 = dataTheme[langAttr].pain.questions.pd1;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd2see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd2;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd2;
+        let depression1 = dataTheme[langAttr].depression.questions.pd2;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd2;
+        let pain1 = dataTheme[langAttr].pain.questions.pd2;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd3see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd3;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd3;
+        let depression1 = dataTheme[langAttr].depression.questions.pd3;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd3;
+        let pain1 = dataTheme[langAttr].pain.questions.pd3;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd4see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd4;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd4;
+        let depression1 = dataTheme[langAttr].depression.questions.pd4;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd4;
+        let pain1 = dataTheme[langAttr].pain.questions.pd4;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd5see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd5;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd5;
+        let depression1 = dataTheme[langAttr].depression.questions.pd5;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd5;
+        let pain1 = dataTheme[langAttr].pain.questions.pd5;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd6see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd6;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd6;
+        let depression1 = dataTheme[langAttr].depression.questions.pd6;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd6;
+        let pain1 = dataTheme[langAttr].pain.questions.pd6;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd7see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd7;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd7;
+        let depression1 = dataTheme[langAttr].depression.questions.pd7;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd7;
+        let pain1 = dataTheme[langAttr].pain.questions.pd7;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd8see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd8;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd8;
+        let depression1 = dataTheme[langAttr].depression.questions.pd8;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd8;
+        let pain1 = dataTheme[langAttr].pain.questions.pd8;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+     
     lookChoice();
     },500)
   }
@@ -456,6 +652,192 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     </div><div class="choix choix${choixContainerNumber} c2" id="${id2}">
     <h2>${propositionDirect2}</h2>
     </div></div>`
+    var choicesclass= '.choix' + choixContainerNumber;
+    var choicesX = document.querySelectorAll(choicesclass);
+    if ( rd1see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd1;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd1;
+        let depression1 = dataTheme[langAttr].depression.questions.pd1;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd1;
+        let pain1 = dataTheme[langAttr].pain.questions.pd1;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd2see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd2;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd2;
+        let depression1 = dataTheme[langAttr].depression.questions.pd2;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd2;
+        let pain1 = dataTheme[langAttr].pain.questions.pd2;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd3see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd3;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd3;
+        let depression1 = dataTheme[langAttr].depression.questions.pd3;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd3;
+        let pain1 = dataTheme[langAttr].pain.questions.pd3;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd4see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd4;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd4;
+        let depression1 = dataTheme[langAttr].depression.questions.pd4;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd4;
+        let pain1 = dataTheme[langAttr].pain.questions.pd4;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd5see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd5;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd5;
+        let depression1 = dataTheme[langAttr].depression.questions.pd5;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd5;
+        let pain1 = dataTheme[langAttr].pain.questions.pd5;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd6see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd6;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd6;
+        let depression1 = dataTheme[langAttr].depression.questions.pd6;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd6;
+        let pain1 = dataTheme[langAttr].pain.questions.pd6;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd7see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd7;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd7;
+        let depression1 = dataTheme[langAttr].depression.questions.pd7;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd7;
+        let pain1 = dataTheme[langAttr].pain.questions.pd7;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd8see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd8;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd8;
+        let depression1 = dataTheme[langAttr].depression.questions.pd8;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd8;
+        let pain1 = dataTheme[langAttr].pain.questions.pd8;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
     lookChoice();
     //onclick
      
@@ -476,6 +858,192 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     </div><div class="choix choix${choixContainerNumber} c3">
     <h2>${propositionDirect3}</h2>
     </div></div>`
+    var choicesclass= '.choix' + choixContainerNumber;
+    var choicesX = document.querySelectorAll(choicesclass);
+    if ( rd1see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd1;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd1;
+        let depression1 = dataTheme[langAttr].depression.questions.pd1;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd1;
+        let pain1 = dataTheme[langAttr].pain.questions.pd1;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd2see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd2;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd2;
+        let depression1 = dataTheme[langAttr].depression.questions.pd2;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd2;
+        let pain1 = dataTheme[langAttr].pain.questions.pd2;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd3see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd3;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd3;
+        let depression1 = dataTheme[langAttr].depression.questions.pd3;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd3;
+        let pain1 = dataTheme[langAttr].pain.questions.pd3;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd4see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd4;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd4;
+        let depression1 = dataTheme[langAttr].depression.questions.pd4;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd4;
+        let pain1 = dataTheme[langAttr].pain.questions.pd4;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd5see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd5;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd5;
+        let depression1 = dataTheme[langAttr].depression.questions.pd5;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd5;
+        let pain1 = dataTheme[langAttr].pain.questions.pd5;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd6see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd6;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd6;
+        let depression1 = dataTheme[langAttr].depression.questions.pd6;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd6;
+        let pain1 = dataTheme[langAttr].pain.questions.pd6;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd7see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd7;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd7;
+        let depression1 = dataTheme[langAttr].depression.questions.pd7;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd7;
+        let pain1 = dataTheme[langAttr].pain.questions.pd7;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd8see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd8;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd8;
+        let depression1 = dataTheme[langAttr].depression.questions.pd8;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd8;
+        let pain1 = dataTheme[langAttr].pain.questions.pd8;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
     lookChoice();
     },500)
 
@@ -493,6 +1061,192 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     </div><div class="choix choix${choixContainerNumber} c4">
     <h2>${propositionDirect4}</h2>
     </div></div>`
+    var choicesclass= '.choix' + choixContainerNumber;
+    var choicesX = document.querySelectorAll(choicesclass);
+    if ( rd1see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd1;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd1;
+        let depression1 = dataTheme[langAttr].depression.questions.pd1;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd1;
+        let pain1 = dataTheme[langAttr].pain.questions.pd1;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd2see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd2;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd2;
+        let depression1 = dataTheme[langAttr].depression.questions.pd2;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd2;
+        let pain1 = dataTheme[langAttr].pain.questions.pd2;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd3see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd3;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd3;
+        let depression1 = dataTheme[langAttr].depression.questions.pd3;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd3;
+        let pain1 = dataTheme[langAttr].pain.questions.pd3;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd4see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd4;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd4;
+        let depression1 = dataTheme[langAttr].depression.questions.pd4;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd4;
+        let pain1 = dataTheme[langAttr].pain.questions.pd4;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd5see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd5;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd5;
+        let depression1 = dataTheme[langAttr].depression.questions.pd5;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd5;
+        let pain1 = dataTheme[langAttr].pain.questions.pd5;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd6see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd6;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd6;
+        let depression1 = dataTheme[langAttr].depression.questions.pd6;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd6;
+        let pain1 = dataTheme[langAttr].pain.questions.pd6;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd7see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd7;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd7;
+        let depression1 = dataTheme[langAttr].depression.questions.pd7;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd7;
+        let pain1 = dataTheme[langAttr].pain.questions.pd7;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd8see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd8;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd8;
+        let depression1 = dataTheme[langAttr].depression.questions.pd8;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd8;
+        let pain1 = dataTheme[langAttr].pain.questions.pd8;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
     lookChoice();
   },500)
   }
@@ -512,9 +1266,199 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     <h2>${propositionDirect5}</h2>
     </div></div>`
     
+    var choicesclass= '.choix' + choixContainerNumber;
+    var choicesX = document.querySelectorAll(choicesclass);
+    if ( rd1see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd1;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd1;
+        let depression1 = dataTheme[langAttr].depression.questions.pd1;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd1;
+        let pain1 = dataTheme[langAttr].pain.questions.pd1;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd2see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd2;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd2;
+        let depression1 = dataTheme[langAttr].depression.questions.pd2;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd2;
+        let pain1 = dataTheme[langAttr].pain.questions.pd2;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd3see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd3;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd3;
+        let depression1 = dataTheme[langAttr].depression.questions.pd3;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd3;
+        let pain1 = dataTheme[langAttr].pain.questions.pd3;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd4see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd4;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd4;
+        let depression1 = dataTheme[langAttr].depression.questions.pd4;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd4;
+        let pain1 = dataTheme[langAttr].pain.questions.pd4;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd5see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd5;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd5;
+        let depression1 = dataTheme[langAttr].depression.questions.pd5;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd5;
+        let pain1 = dataTheme[langAttr].pain.questions.pd5;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd6see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd6;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd6;
+        let depression1 = dataTheme[langAttr].depression.questions.pd6;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd6;
+        let pain1 = dataTheme[langAttr].pain.questions.pd6;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd7see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd7;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd7;
+        let depression1 = dataTheme[langAttr].depression.questions.pd7;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd7;
+        let pain1 = dataTheme[langAttr].pain.questions.pd7;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+    if ( rd8see ) {
+      for (let i = 0; i < choicesX.length; i++) {
+        let buttonText = choicesX[i].innerText;
+        let anxiety1 = dataTheme[langAttr].anxiety.questions.pd8;
+        let fatigue1 = dataTheme[langAttr].fatigue.questions.pd8;
+        let depression1 = dataTheme[langAttr].depression.questions.pd8;
+        let sleep1 = dataTheme[langAttr].sleep.questions.pd8;
+        let pain1 = dataTheme[langAttr].pain.questions.pd8;
+        if ( buttonText == anxiety1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == fatigue1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == depression1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == sleep1) {
+          choicesX[i].style.display ="none";
+        } else if ( buttonText == pain1) {
+          choicesX[i].style.display ="none";
+        } else {
+
+        }
+      }
+    }
+
+    
+    
+
     lookChoice();
     
-    },500)
+    },500);
   }
 
   function proposeChoice6(p1,p2,p3,p4,p5,p6) {
@@ -522,17 +1466,43 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
       choixContainerNumber++;
     chatBotC.innerHTML += `<div class="choix-questions choix-questions${choixContainerNumber}">
     <div class="choix choix${choixContainerNumber} c1">
-        <h2>${propositionDirect1}</h2>
+        <h2>${p1}</h2>
     </div><div class="choix choix${choixContainerNumber} c2">
-    <h2>${propositionDirect2}</h2>
+    <h2>${p2}</h2>
     </div><div class="choix choix${choixContainerNumber} c3">
-    <h2>${propositionDirect3}</h2>
+    <h2>${p3}</h2>
     </div><div class="choix choix${choixContainerNumber} c4">
-    <h2>${propositionDirect4}</h2>
+    <h2>${p4}</h2>
     </div><div class="choix choix${choixContainerNumber} c5">
-    <h2>${propositionDirect5}</h2>
+    <h2>${p5}</h2>
     </div><div class="choix choix${choixContainerNumber} c5">
-    <h2>${propositionDirect5}</h2>
+    <h2>${p6}</h2>
+    </div></div>`
+    
+    lookChoice();
+    
+    },500)
+  }
+  function proposeChoice8(p1,p2,p3,p4,p5,p6,p7,p8) {
+    setTimeout(function() {
+      choixContainerNumber++;
+    chatBotC.innerHTML += `<div class="choix-questions choix-questions${choixContainerNumber}">
+    <div class="choix choix${choixContainerNumber} c1">
+        <h2>${p1}</h2>
+    </div><div class="choix choix${choixContainerNumber} c2">
+    <h2>${p2}</h2>
+    </div><div class="choix choix${choixContainerNumber} c3">
+    <h2>${p3}</h2>
+    </div><div class="choix choix${choixContainerNumber} c4">
+    <h2>${p4}</h2>
+    </div><div class="choix choix${choixContainerNumber} c5">
+    <h2>${p5}</h2>
+    </div><div class="choix choix${choixContainerNumber} c5">
+    <h2>${p6}</h2>
+    </div><div class="choix choix${choixContainerNumber} c5">
+    <h2>${p7}</h2>
+    </div><div class="choix choix${choixContainerNumber} c5">
+    <h2>${p8}</h2>
     </div></div>`
     
     lookChoice();
@@ -541,6 +1511,7 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
   }
 
   function lookChoice() {
+   
     console.log(rd1see,rd2see,rd3see,rd4see,rd5see,rd6see,rd7see,rd8see + 'entered look choice; voici les valeurs de mes rdsee')
       console.log("Entre dans la fonction lookchoice");
       //recupère les boutons des options récents :
@@ -557,6 +1528,7 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
         let anxiety4 = dataTheme[langAttr].anxiety.questions.pd4;
         let anxiety5 = dataTheme[langAttr].anxiety.questions.pd5;
         let anxiety6 = dataTheme[langAttr].anxiety.questions.pd6;
+        let anxiety10 =dataTheme[langAttr].anxiety.questions.pd10;
 
         let fatigue1 = dataTheme[langAttr].fatigue.questions.pd1;
         let fatigue2 = dataTheme[langAttr].fatigue.questions.pd2;
@@ -566,10 +1538,12 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
         let fatigue6 = dataTheme[langAttr].fatigue.questions.pd6;
         let fatigue7 = dataTheme[langAttr].fatigue.questions.pd7;
         let fatigue8 = dataTheme[langAttr].fatigue.questions.pd8;
+        let fatigue10 =dataTheme[langAttr].fatigue.questions.pd10; 
 
         let depression1 = dataTheme[langAttr].depression.questions.pd1;
         let depression2 = dataTheme[langAttr].depression.questions.pd2;
         let depression3 = dataTheme[langAttr].depression.questions.pd3;
+        let depression10 =dataTheme[langAttr].depression.questions.pd10; 
 
         let sleep1 = dataTheme[langAttr].sleep.questions.pd1;
         let sleep2 = dataTheme[langAttr].sleep.questions.pd2;
@@ -577,6 +1551,7 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
         let sleep4 = dataTheme[langAttr].sleep.questions.pd4;
         let sleep5 = dataTheme[langAttr].sleep.questions.pd5;
         let sleep6 = dataTheme[langAttr].sleep.questions.pd6;
+        let sleep10 =dataTheme[langAttr].sleep.questions.pd10;
 
         let pain1 = dataTheme[langAttr].pain.questions.pd1;
         let pain2 = dataTheme[langAttr].pain.questions.pd2;
@@ -584,8 +1559,10 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
         let pain4 = dataTheme[langAttr].pain.questions.pd4;
         let pain5 = dataTheme[langAttr].pain.questions.pd5;
         let pain6 = dataTheme[langAttr].pain.questions.pd6;
+        let pain10 =dataTheme[langAttr].pain.questions.pd10; 
 
         let pdt = dataTheme[langAttr].pdt;
+        
         chosenButtonDisplay(texteBouton);
 
         if( texteBouton == pdt) {
@@ -602,7 +1579,9 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
             anxietyQ5()
         } else if ( texteBouton == anxiety6) {
           anxietyQ6()
-        } else if ( texteBouton == fatigue1) {
+        } else if ( texteBouton == anxiety10) {
+          anxietyQ10()
+        }else if ( texteBouton == fatigue1) {
           fatigueQ1()
         } else if ( texteBouton == fatigue2) {
           fatigueQ2()
@@ -618,12 +1597,16 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
           fatigueQ7()
         } else if ( texteBouton == fatigue8) {
           fatigueQ8()
-        } else if ( texteBouton == depression1) {
+        } else if ( texteBouton == fatigue10) {
+          fatigueQ10()
+        }else if ( texteBouton == depression1) {
           depressionQ1()
         } else if ( texteBouton == depression2) {
           depressionQ2()
         } else if ( texteBouton == depression3) {
           depressionQ3()
+        }else if ( texteBouton == depression10) {
+          depressionQ10()
         } else if ( texteBouton == sleep1) {
           sleepQ1()
         } else if ( texteBouton == sleep2) {
@@ -636,7 +1619,9 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
           sleepQ5()
         } else if ( texteBouton == sleep6) {
           sleepQ6()
-        } else if ( texteBouton == pain1) {
+        } else if ( texteBouton == sleep10) {
+          sleepQ10()
+        }else if ( texteBouton == pain1) {
           painQ1()
         } else if ( texteBouton == pain2) {
           painQ2()
@@ -648,7 +1633,9 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
           painQ5()
         } else if ( texteBouton == pain6) {
           painQ6()
-        } else {
+        } else if ( texteBouton == pain10) {
+          painQ10()
+        }else {
           console.log('ne matche pas ?!')
           newtheme();
         }
@@ -1153,10 +2140,11 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd1= dataTheme[langAttr].anxiety.questions.pd4;
     var pd2= dataTheme[langAttr].anxiety.questions.pd5;
     var pd3= dataTheme[langAttr].anxiety.questions.pd6;
+    var pd4 =dataTheme[langAttr].anxiety.questions.pd10;
     
 
     setTimeout(function(){
-          proposeChoice3(pd1,pd2,pd3)
+          proposeChoice4(pd1,pd2,pd3,pd4)
      },3000)
   }
   function anxietyQ4() {
@@ -1168,9 +2156,10 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd2= dataTheme[langAttr].anxiety.questions.pd5;
     var pd3= dataTheme[langAttr].anxiety.questions.pd6;
     var pd4= dataTheme[langAttr].pdt;
+    var pd5 =dataTheme[langAttr].anxiety.questions.pd10;
 
     setTimeout(function(){
-          proposeChoice4(pd1,pd2,pd3,pd4)
+          proposeChoice5(pd1,pd2,pd3,pd5,pd4)
      },3500)
   }
   function anxietyQ5() {
@@ -1182,9 +2171,10 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd2= dataTheme[langAttr].anxiety.questions.pd2;
     var pd3= dataTheme[langAttr].anxiety.questions.pd6;
     var pd4= dataTheme[langAttr].pdt;
+    var pd5 =dataTheme[langAttr].anxiety.questions.pd10;
 
     setTimeout(function(){
-          proposeChoice4(pd1,pd2,pd3,pd4)
+          proposeChoice5(pd1,pd2,pd3,pd5,pd4)
      },3500)
   }
   function anxietyQ6() {
@@ -1196,10 +2186,26 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd2= dataTheme[langAttr].anxiety.questions.pd3;
     var pd3= dataTheme[langAttr].anxiety.questions.pd6;
     var pd4= dataTheme[langAttr].pdt;
+    var pd5 =dataTheme[langAttr].anxiety.questions.pd10;
 
     setTimeout(function(){
-          proposeChoice4(pd1,pd2,pd3,pd4)
+          proposeChoice5(pd1,pd2,pd3,pd5,pd4)
      },4500)
+  }
+  function anxietyQ10() {
+    enterTheme();
+    
+    var pd1= dataTheme[langAttr].anxiety.questions.pd1;
+    var pd2= dataTheme[langAttr].anxiety.questions.pd2;
+    var pd3= dataTheme[langAttr].anxiety.questions.pd3;
+    var pd4= dataTheme[langAttr].anxiety.questions.pd4;
+    var pd5= dataTheme[langAttr].anxiety.questions.pd5;
+    var pd6= dataTheme[langAttr].anxiety.questions.pd6;
+    
+
+    setTimeout(function(){
+          proposeChoice6(pd1,pd2,pd3,pd4,pd5,pd6)
+     },1000)
   }
 
 
@@ -1244,9 +2250,10 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd1= dataTheme[langAttr].pain.questions.pd4;
     var pd2= dataTheme[langAttr].pain.questions.pd5;
     var pd3= dataTheme[langAttr].pain.questions.pd6;
+    var pd4 =dataTheme[langAttr].pain.questions.pd10;
      
     setTimeout(function(){
-          proposeChoice3(pd1,pd2,pd3)
+          proposeChoice4(pd1,pd2,pd3,pd4)
      },5500)
   }
   function painQ4() {
@@ -1257,10 +2264,11 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd1= dataTheme[langAttr].pain.questions.pd2;
     var pd2= dataTheme[langAttr].pain.questions.pd5;
     var pd3= dataTheme[langAttr].pain.questions.pd6;
+    var pd5 =dataTheme[langAttr].pain.questions.pd10;
     var pd4= dataTheme[langAttr].pdt;
 
     setTimeout(function(){
-          proposeChoice4(pd1,pd2,pd3,pd4)
+          proposeChoice5(pd1,pd2,pd3,pd5,pd4)
      },4500)
   }
   function painQ5() {
@@ -1272,9 +2280,10 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd2= dataTheme[langAttr].pain.questions.pd4;
     var pd3= dataTheme[langAttr].pain.questions.pd6;
     var pd4= dataTheme[langAttr].pdt;
+    var pd5 =dataTheme[langAttr].pain.questions.pd10;
      
     setTimeout(function(){
-          proposeChoice4(pd1,pd2,pd3,pd4)
+          proposeChoice5(pd1,pd2,pd3,pd5,pd4)
      },5500)
   }
   function painQ6() {
@@ -1290,6 +2299,22 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     setTimeout(function(){
           proposeChoice4(pd1,pd2,pd3,pd4)
      },4500)
+  }
+
+  function painQ10() {
+    enterTheme();
+    
+    var pd1= dataTheme[langAttr].pain.questions.pd1;
+    var pd2= dataTheme[langAttr].pain.questions.pd2;
+    var pd3= dataTheme[langAttr].pain.questions.pd3;
+    var pd4= dataTheme[langAttr].pain.questions.pd4;
+    var pd5= dataTheme[langAttr].pain.questions.pd5;
+    var pd6= dataTheme[langAttr].pain.questions.pd6;
+    
+
+    setTimeout(function(){
+          proposeChoice6(pd1,pd2,pd3,pd4,pd5,pd6)
+     },1000)
   }
 
 
@@ -1330,10 +2355,11 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd1= dataTheme[langAttr].sleep.questions.pd4;
     var pd2= dataTheme[langAttr].sleep.questions.pd5;
     var pd3= dataTheme[langAttr].sleep.questions.pd6;
+    var pd4 =dataTheme[langAttr].sleep.questions.pd10;
   
      
     setTimeout(function(){
-          proposeChoice3(pd1,pd2,pd3)
+          proposeChoice4(pd1,pd2,pd4,pd3)
      },4500)
   }
   function sleepQ4() {
@@ -1345,9 +2371,10 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd2= dataTheme[langAttr].sleep.questions.pd5;
     var pd3= dataTheme[langAttr].sleep.questions.pd6;
     var pd4= dataTheme[langAttr].pdt;
+    var pd5 =dataTheme[langAttr].sleep.questions.pd10;
      
     setTimeout(function(){
-          proposeChoice4(pd1,pd2,pd3,pd4)
+          proposeChoice5(pd1,pd2,pd3,pd5,pd4)
      },3500)
   }
   function sleepQ5() {
@@ -1359,9 +2386,10 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd2= dataTheme[langAttr].sleep.questions.pd4;
     var pd3= dataTheme[langAttr].sleep.questions.pd6;
     var pd4= dataTheme[langAttr].pdt;
+    var pd5 =dataTheme[langAttr].sleep.questions.pd10;
      
     setTimeout(function(){
-          proposeChoice4(pd1,pd2,pd3,pd4)
+          proposeChoice5(pd1,pd2,pd3,pd5,pd4)
      },3500)
   }
   function sleepQ6() {
@@ -1373,10 +2401,27 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd2= dataTheme[langAttr].sleep.questions.pd4;
     var pd3= dataTheme[langAttr].sleep.questions.pd5;
     var pd4= dataTheme[langAttr].pdt;
+    var pd5 =dataTheme[langAttr].sleep.questions.pd10;
      
     setTimeout(function(){
-          proposeChoice4(pd1,pd2,pd3,pd4)
+          proposeChoice5(pd1,pd2,pd3,pd5,pd4)
      },5500)
+  }
+
+  function sleepQ10() {
+    enterTheme();
+    
+    var pd1= dataTheme[langAttr].sleep.questions.pd1;
+    var pd2= dataTheme[langAttr].sleep.questions.pd2;
+    var pd3= dataTheme[langAttr].sleep.questions.pd3;
+    var pd4= dataTheme[langAttr].sleep.questions.pd4;
+    var pd5= dataTheme[langAttr].sleep.questions.pd5;
+    var pd6= dataTheme[langAttr].sleep.questions.pd6;
+    
+
+    setTimeout(function(){
+          proposeChoice6(pd1,pd2,pd3,pd4,pd5,pd6)
+     },1000)
   }
 
   function depressionQ1() {
@@ -1387,9 +2432,10 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd1= dataTheme[langAttr].depression.questions.pd2;
     var pd2= dataTheme[langAttr].depression.questions.pd3;
     var pd3= dataTheme[langAttr].pdt;
+    var pd4 =dataTheme[langAttr].depression.questions.pd10;
      
     setTimeout(function(){
-          proposeChoice3(pd1,pd2,pd3)
+          proposeChoice4(pd1,pd2,pd4,pd3)
      },4500)
   }
   function depressionQ2() {
@@ -1400,9 +2446,10 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd1= dataTheme[langAttr].depression.questions.pd1;
     var pd2= dataTheme[langAttr].depression.questions.pd3;
     var pd3= dataTheme[langAttr].pdt;
+    var pd4 =dataTheme[langAttr].depression.questions.pd10;
      
     setTimeout(function(){
-          proposeChoice3(pd1,pd2,pd3)
+          proposeChoice4(pd1,pd2,pd4,pd3)
      },3500)
   }
   function depressionQ3() {
@@ -1413,10 +2460,24 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd1= dataTheme[langAttr].depression.questions.pd1;
     var pd2= dataTheme[langAttr].depression.questions.pd2;
     var pd3= dataTheme[langAttr].pdt;
+    var pd4 =dataTheme[langAttr].depression.questions.pd10;
      
     setTimeout(function(){
-          proposeChoice3(pd1,pd2,pd3)
+          proposeChoice4(pd1,pd2,pd4,pd3)
      },4500)
+  }
+  function depressionQ10() {
+    enterTheme();
+    
+    var pd1= dataTheme[langAttr].depression.questions.pd1;
+    var pd2= dataTheme[langAttr].depression.questions.pd2;
+    var pd3= dataTheme[langAttr].depression.questions.pd3;
+    
+    
+
+    setTimeout(function(){
+          proposeChoice3(pd1,pd2,pd3)
+     },1000)
   }
 
   function fatigueQ1() {
@@ -1444,12 +2505,13 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var pd1= dataTheme[langAttr].fatigue.questions.pd1;
     var pd2= dataTheme[langAttr].fatigue.questions.pd3;
     var pd3= dataTheme[langAttr].fatigue.questions.pd4;
+    var pd5 =dataTheme[langAttr].fatigue.questions.pd10;
     var pd4= dataTheme[langAttr].pdt;
    
     
      
     setTimeout(function(){
-          proposeChoice4(pd1,pd2,pd3,pd4)
+          proposeChoice5(pd1,pd2,pd3,pd5,pd4)
      },3500)
   }
   function fatigueQ3() {
@@ -1537,7 +2599,7 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     var t1 = dataTheme[langAttr].fatigue.answers.t8;
     rd8see = true;
     showResponses1(rd1,t1);
-    var pd1= dataTheme[langAttr].fatigue.questions.pd3;
+    var pd5 =dataTheme[langAttr].fatigue.questions.pd10;
     var pd2= dataTheme[langAttr].fatigue.questions.pd5;
     var pd3= dataTheme[langAttr].fatigue.questions.pd6;
     var pd4= dataTheme[langAttr].fatigue.questions.pd7;
@@ -1545,8 +2607,26 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     
      
     setTimeout(function(){
-          proposeChoice5(pd1,pd2,pd3,pd4,pd5)
+          proposeChoice5(pd5,pd2,pd3,pd4,pd5)
      },5500)
+  }
+
+  function fatigueQ10() {
+    enterTheme();
+    
+    var pd1= dataTheme[langAttr].fatigue.questions.pd1;
+    var pd2= dataTheme[langAttr].fatigue.questions.pd2;
+    var pd3= dataTheme[langAttr].fatigue.questions.pd3;
+    var pd4= dataTheme[langAttr].fatigue.questions.pd4;
+    var pd5= dataTheme[langAttr].fatigue.questions.pd5;
+    var pd6= dataTheme[langAttr].fatigue.questions.pd6;
+    var pd7= dataTheme[langAttr].fatigue.questions.pd7;
+    var pd8= dataTheme[langAttr].fatigue.questions.pd8;
+    
+
+    setTimeout(function(){
+          proposeChoice8(pd1,pd2,pd3,pd4,pd5,pd6,pd7,pd8)
+     },1000)
   }
 
 

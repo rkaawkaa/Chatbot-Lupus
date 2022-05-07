@@ -33,6 +33,7 @@ dataTheme = {
         "more" : ["What else do you want to learn about? &#128519","What else do you want to know? &#128522","How can I still help you? &#128515","What else would you like my advice on? &#129488"],
          "proposetheme": "What do you want to talk about ?",  
          "pdt" : "Choose another subject", 
+         
         "anxiety": {
             "questions": {
                 "pd1": "What is anxiety ?",
@@ -41,6 +42,7 @@ dataTheme = {
                 "pd4": "How to treat anxiety ?",
                 "pd5": "What is stress ?",
                 "pd6": "How to prevent and cope with stress ?",
+                "pd10" : "See all questions on anxiety"
                 
 
             },
@@ -69,7 +71,8 @@ dataTheme = {
                 "pd5": "How can I assess my fatigue level in systemic lupus erythematosus ?",
                 "pd6": "How to manage fatigue in systemic lupus erythematosus ?",
                 "pd7": "What are the pharmacological treatments that can improve fatigue ?",
-                "pd8": " What are the non-pharmacological interventions that can improve fatigue ?"
+                "pd8": " What are the non-pharmacological interventions that can improve fatigue ?",
+                "pd10" : "See all questions on fatigue",
                 
 
             },
@@ -98,6 +101,7 @@ dataTheme = {
                 "pd1": "What are the symptoms of depression ?",
                 "pd2": "What are the causes of depression ?",
                 "pd3": "How to treat depression ?",
+                "pd10" : "See all questions on depression"
 
             },
             "answers": {
@@ -119,6 +123,7 @@ dataTheme = {
                 "pd4": "What is restless legs syndrome ?",
                 "pd5": "What are the consequences of sleep deprivation ?",
                 "pd6": "How to improve insomnia or quality of sleep ?",
+                "pd10" : "See all questions on sleep"
                 
 
             },
@@ -146,6 +151,7 @@ dataTheme = {
                 "pd4": "What are the consequences of chronic pain?",
                 "pd5": "How to manage pain ?",
                 "pd6": "How to handle pain when it persists?",
+                "pd10" : "See all questions on pain"
                 
 
             },
@@ -178,6 +184,7 @@ dataTheme = {
                 "pd4": "Comment soigner l'anxiét ?",
                 "pd5": "Qu'est-ce que le stress ?",
                 "pd6": "Comment prévenir et gérer le stress ?",
+                "pd10": "Voir toutes les questions sur l'anxiété"
                 
 
             },
@@ -206,7 +213,8 @@ dataTheme = {
                 "pd5": "Comment puis-je évaluer mon niveau da fatigue dans le lupus érythémateux disséminé ?",
                 "pd6": "Comment gérer la fatigue dans le lupus érythémateux disséminé ?",
                 "pd7": "Quels sont les traitements pharmacologiques qui peuvent améliorer la fatigue ?",
-                "pd8": "Quelles sont les interventions non pharmacologiques qui peuvent améliorer la fatigue ?"
+                "pd8": "Quelles sont les interventions non pharmacologiques qui peuvent améliorer la fatigue ?",
+                "pd10": "Voir toutes les questions sur la fatigue"
                 
 
             },
@@ -235,6 +243,7 @@ dataTheme = {
                 "pd1": "Quelles sont les symptômes de la dépression ?",
                 "pd2": "Quelles sont les causes de la dépression ?",
                 "pd3": "Comment traiter la dépression ?",
+                "pd10": "Voir toutes les questions sur la dépression"
 
             },
             "answers": {
@@ -256,6 +265,7 @@ dataTheme = {
                 "pd4": "Qu'est-ce que le syndrome des jambes sans repos ?",
                 "pd5": "Quelles sont les conséquences de la privation de sommeil ?",
                 "pd6": "Comment améliorer l'insomnie ou la qualité du sommeil ?",
+                "pd10": "Voir toutes les questions sur le sommeil"
                 
 
             },
@@ -283,6 +293,7 @@ dataTheme = {
                 "pd4": "Quelles sont les conséquences de la douleur chronique ?",
                 "pd5": "Comment gérer la douleur ?",
                 "pd6": "Comment gérer la douleur quand elle persiste ?",
+                "pd10" : "Voir toutes les questions sur la douleur"
                 
 
             },
