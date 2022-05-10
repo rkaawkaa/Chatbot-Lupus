@@ -6,8 +6,10 @@ $("document").ready(function() {
   })  
   const footerText= document.querySelector('.footer-text')
   const buttonWeb = document.querySelector('.website');
+  buttonWeb.addEventListener('click',() => {
+    window.open('https://lupus-leaf.netlify.app','_blank');
+  })
   const buttonThemes = document.querySelector('.themes');
-  console.log(GeneralData.english.buttonwebsite)
   activeLangBtn();
   starterFctn();
   function activeLangBtn() {
@@ -122,7 +124,6 @@ $("document").ready(function() {
     
     setTimeout(function() {
       var icondisap = "lea-icon" + indexmessage;
-      console.log(icondisap)
       $('.' + icondisap).css('opacity', '0');
     },200)  //delaybetweennewmessageandicondisappear const 
     },2100)  //t1+delaybetweendotmessage  (delay constant)
@@ -139,7 +140,6 @@ $("document").ready(function() {
     setTimeout(function() {
       indexmessage ++;
   
-    console.log(indexmessage + "au 2e dots")
       chatBotC.innerHTML += `<div class="lea-message-cont">
       <div class="dots">
           <div class="dot dot1"></div>
@@ -163,7 +163,6 @@ $("document").ready(function() {
   //on fait disparaitre l'icone de la classe span-lea0 au bout de 2.4s.
     setTimeout(function() {
       var spanDisap = "lea-icon" + indexmessage;
-      console.log(spanDisap)
       $('.' + spanDisap).css('opacity', '0');
     },200)
     },4400)
@@ -175,7 +174,6 @@ $("document").ready(function() {
   //3e dots 
   setTimeout(function() {
     indexmessage ++;
-    console.log(indexmessage +"au 3e dots")
     chatBotC.innerHTML += `<div class="lea-message-cont">
     <div class="dots">
         <div class="dot dot1"></div>
@@ -200,7 +198,6 @@ $("document").ready(function() {
 //on fait disparaitre l'icone de la classe span-lea0 au bout de 2.4s.
   setTimeout(function() {
     let spanDisap = "lea-icon" + indexmessage;
-    console.log(spanDisap)
     $('.' + spanDisap).css('opacity', '0');
   },300)
   },6700)
@@ -1512,8 +1509,6 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
 
   function lookChoice() {
    
-    console.log(rd1see,rd2see,rd3see,rd4see,rd5see,rd6see,rd7see,rd8see + 'entered look choice; voici les valeurs de mes rdsee')
-      console.log("Entre dans la fonction lookchoice");
       //recupère les boutons des options récents :
       var choicesclass= '.choix' + choixContainerNumber;
       var choices = document.querySelectorAll(choicesclass);
@@ -1636,7 +1631,6 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
         } else if ( texteBouton == pain10) {
           painQ10()
         }else {
-          console.log('ne matche pas ?!')
           newtheme();
         }
        })
@@ -1683,7 +1677,6 @@ function proposeChoice5T(propositionDirect1, propositionDirect2, propositionDire
     cleanResponses()
     setTimeout(function(){
       indexmessage ++;
-      console.log(indexmessage +" index message showresponse2 pour le 1er message")
 
       //1er dots
       chatBotC.innerHTML += `<div class="lea-message-cont">
